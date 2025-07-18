@@ -1,5 +1,6 @@
 import axios from "./axios"
 import { logoutUser } from "../features/auth/authSlice"
+import axiosInstance from "./axios"
 
 export const setupInterceptors = (store) => {
   axios.interceptors.response.use(
@@ -14,7 +15,7 @@ export const setupInterceptors = (store) => {
       ) {
         originalRequest._retry = true
         try {
-          await axios.get("/auth/refresh", {
+          await axiosInstance.get("/auth/refresh", {
             withCredentials: true,
           })
           return axios(originalRequest)

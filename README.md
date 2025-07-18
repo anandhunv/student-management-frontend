@@ -17,13 +17,16 @@ This is the frontend for the Student Management System built with React, Redux, 
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/student-management-frontend.git
+git clone https://github.com/anandhunv/student-management-frontend
 cd student-management-frontend
 
 
 
-2. Install dependencies
-bash
-Copy
-Edit
+ Install dependencies
+
 npm install
+
+
+Run the development server
+
+npm run dev
