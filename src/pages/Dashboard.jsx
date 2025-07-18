@@ -35,7 +35,7 @@ const Dashboard = () => {
               title="Manage Students"
               description="View student list or request edit access."
               link="/students"
-                image={STAFF_LOGO_IMAGE}
+                image={STUDENT_LOGO_IMAGE}
             />
           )}
         </div>
