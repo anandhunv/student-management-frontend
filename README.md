@@ -41,6 +41,36 @@ Backend: [https://student-management-backend-6ecp.onrender.com](https://student-
 
 ---
 
+## 🧭 Routes in App
+
+| Route         | Role Access     | Description                           |
+|---------------|------------------|---------------------------------------|
+| `/login`      | Public           | Login page                            |
+| `/dashboard`  | Admin / Staff    | Main dashboard                        |
+| `/students`   | Admin / Staff    | View/add/edit/delete students         |
+| `/staffs`     | Admin only       | Manage staff and set permissions      |
+
+---
+
+## 👥 Role Permissions Logic
+
+### 🔐 Super Admin
+- ✅ Full access to both **students** and **staff**
+- ✅ Can add, edit, delete students
+- ✅ Can add staff and assign permissions
+
+### 👤 Staff
+- 👀 Initially only has **view access** to students
+- 📝 **Create/Edit/Delete** actions must be granted by the **Super Admin**
+
+✅ Permissions:
+- View: Can see student data
+- Create: Can add new students
+- Edit: Can update student records
+- Delete: Can remove student records
+
+
+
 ## 🛠️ Setup Instructions
 
 ### 1. Clone the Repository
@@ -50,3 +80,21 @@ git clone https://github.com/your-username/student-management-frontend.git
 cd student-management-frontend
 ```
 
+### 2. Install Dependencies
+
+```bash
+npm install
+
+```
+
+### 3. Environment Setup
+
+Create a .env file:
+
+```
+VITE_API_BASE_URL=https://student-management-backend-6ecp.onrender.com/api
+```
+
+### 4. Run Frontend
+
+```npm run dev```
