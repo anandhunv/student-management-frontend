@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import Header from "../components/Header"
 import Card from "../components/Card"
+import { STAFF_LOGO_IMAGE, STUDENT_LOGO_IMAGE } from "../utils/constants"
 
 const Dashboard = () => {
   const { user } = useSelector((state) => state.auth)
@@ -17,13 +18,14 @@ const Dashboard = () => {
                 title="Manage Students"
                 description="Create, edit, and remove student records easily."
                 link="/students"
-                image="https://cdn-icons-png.flaticon.com/512/354/354637.png"
+                image={STUDENT_LOGO_IMAGE}
               />
               <Card
                 title="Manage Staff"
                 description="Add staff and assign permissions and roles."
                 link="/staffs"
-                image="https://cdn-icons-png.flaticon.com/256/4232/4232293.png"
+                image={STAFF_LOGO_IMAGE}
+
               />
             </>
           )}
@@ -33,7 +35,7 @@ const Dashboard = () => {
               title="Manage Students"
               description="View student list or request edit access."
               link="/students"
-              image="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
+                image={STAFF_LOGO_IMAGE}
             />
           )}
         </div>

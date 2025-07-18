@@ -1,4 +1,3 @@
-// src/components/DashboardCard.jsx
 import { Link } from "react-router"
 
 const DashboardCard = ({ title, description, link, image }) => {

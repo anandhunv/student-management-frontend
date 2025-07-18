@@ -38,7 +38,7 @@ const Login = () => {
             label="Email"
             type="email"
             name="email"
-            placeholder="admin@example.com"
+            placeholder="admin@gmail.com"
             value={formData.email}
             onChange={handleChange}
             required
@@ -47,7 +47,7 @@ const Login = () => {
             label="Password"
             type="password"
             name="password"
-            placeholder="********"
+            placeholder="123456"  //for to login test
             value={formData.password}
             onChange={handleChange}
             required
