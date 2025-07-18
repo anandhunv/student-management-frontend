@@ -1,32 +1,52 @@
-# Student Management System – Frontend
 
-This is the frontend for the Student Management System built with React, Redux, Tailwind CSS, and Vite.
+---
 
-## 🚀 Live Demo
-👉 []()
+### ✅ `frontend/README.md`
 
-## 📦 Tech Stack
-- React 19
-- Redux Toolkit
-- Tailwind CSS
-- Vite
-- Axios
+# Student Management System - Frontend
+
+This is the **frontend** of the Student Management System built using **React**, **Redux Toolkit**, and **Tailwind CSS**. It connects to a secure Node.js backend and enables Super Admins and Staff to manage student and staff records.
+
+---
+
+## 🚀 Deployment
+
+### 🔗 Hosted Application:
+Frontend: [https://student-management-frontend-peach.vercel.app](https://student-management-frontend-peach.vercel.app)  
+Backend: [https://student-management-backend-6ecp.onrender.com](https://student-management-backend-6ecp.onrender.com)
+
+---
+
+## 👥 Roles and Credentials
+
+### 🔐 Super Admin (default user)
+- **Email:** `admin@gmail.com`
+- **Password:** `123456`
+
+### 👤 Staff User
+- **Email:** `staff@gmail.com`
+- **Password:** `123456`
 
 
-## ⚙️ Getting Started
 
-### 1. Clone the repo
+## ⚙️ Features
+
+- Super Admin & Staff login
+- Dashboard with role-based UI
+- Student CRUD operations
+- Staff management with permission assignment
+- Real-time permission control
+- Secure Axios interceptor with token refresh
+- Responsive UI with Tailwind CSS
+
+---
+
+## 🛠️ Setup Instructions
+
+### 1. Clone the Repository
+
 ```bash
-git clone https://github.com/anandhunv/student-management-frontend
+git clone https://github.com/your-username/student-management-frontend.git
 cd student-management-frontend
+```
 
-
-
- Install dependencies
-
-npm install
-
-
-Run the development server
-
-npm run dev
