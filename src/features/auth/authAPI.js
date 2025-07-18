@@ -1,13 +1,13 @@
-import axios from "../../utils/axios"
+import axiosInstance from "../../utils/axios"
 
 export const loginUser = async (userData) => {
-  const response = await axios.post("/auth/login", userData)
+  const response = await axiosInstance.post("/auth/login", userData)
   return response.data
 }
 
 
 
 export const getProfile = async () => {
-  const res = await axios.get("/auth/profile")
+  const res = await axiosInstance.get("/auth/profile")
   return res.data
 }
