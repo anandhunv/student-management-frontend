@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import {
   createStudent,
   editStudent,
@@ -36,6 +36,10 @@ const Students = () => {
   const can = (action) =>
     user?.role === "superAdmin" || user?.permissions?.students?.[action];
 
+//   const can = useCallback(
+//   (action) =>  user?.role === "superAdmin" ||user?.permissions?.[action],
+//   [user] // re-create when user/permissions change
+// );
   const handleAdd = () => {
     if (!can("create")) return;
     setEditing(null);

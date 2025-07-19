@@ -1,5 +1,5 @@
 import axios from "./axios"
-import { logoutUser } from "../features/auth/authSlice"
+import { logoutUser, loadUser } from "../features/auth/authSlice"
 import axiosInstance from "./axios"
 
 export const setupInterceptors = (store) => {
@@ -18,6 +18,11 @@ export const setupInterceptors = (store) => {
           await axiosInstance.get("/auth/refresh", {
             withCredentials: true,
           })
+
+          // Immediately reload the user
+          store.dispatch(loadUser())
+
+          // Retry the original failed request
           return axios(originalRequest)
         } catch (refreshError) {
           store.dispatch(logoutUser())
